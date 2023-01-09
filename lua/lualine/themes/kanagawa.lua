@@ -15,6 +15,11 @@ kanagawa.insert = {
   y = { bg = theme.diag.ok, fg = theme.ui.bg },
 }
 
+kanagawa.terminal = {
+  a = { bg = theme.diag.hint, fg = theme.ui.bg },
+  b = { bg = theme.ui.bg, fg = theme.diag.hint },
+}
+
 kanagawa.command = {
   a = { bg = theme.syn.operator, fg = theme.ui.bg },
   b = { bg = theme.ui.bg, fg = theme.syn.operator },
