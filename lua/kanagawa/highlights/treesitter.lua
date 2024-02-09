@@ -83,7 +83,7 @@ function M.setup(colors, config)
         -- @keyword.exception      keywords related to exceptions (e.g. `throw`, `catch`)
         ["@keyword.exception"] = vim.tbl_extend("force", { fg = theme.syn.special3 }, config.statementStyle),
 
-        ["@keyword.luap"] = { link = "@string.regex" },
+        ["@keyword.luap"] = { link = "@string.regexp" },
         --
         -- @keyword.conditional         keywords related to conditionals (e.g. `if`, `else`)
         -- @keyword.conditional.ternary ternary operator (e.g. `?`, `:`)
@@ -146,6 +146,7 @@ function M.setup(colors, config)
         -- @markup.raw.block       literal or verbatim text as a stand-alone block
         --
         -- @markup.list            list markers
+        ["@markup.list"] = { fg = theme.syn.special1 },
         -- @markup.list.checked    checked todo-style list markers
         -- @markup.list.unchecked  unchecked todo-style list markers
         --
