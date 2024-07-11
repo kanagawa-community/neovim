@@ -395,7 +395,7 @@ The colors maintain a `4.5:1` contrast ratio, complying with [WCAG 2.1 | Level A
 - [Base16](extras/base16/)
 - [Broot](extras/broot/)
 - [Emacs](extras/emacs/)
-- [Fish](extras/fish/)
+- [Fish](extras/fish/) (also available as a [plugin](https://github.com/nakulj/kanagawa.fish))
 - [Foot](extras/foot/)
 - [iTerm](extras/iterm/)
 - [Kitty](extras/kitty/)
