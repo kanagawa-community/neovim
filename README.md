@@ -1,41 +1,36 @@
-<table role="presentation">
-  <tr>
-    <td align="center" valign="middle" width="220">
-      <img src="https://raw.githubusercontent.com/kanagawa-community/.github/main/assets/branding/logo.png" alt="Kanagawa logo" width="200">
-    </td>
-    <td valign="middle">
-      <h1>Kanagawa for <a href="https://neovim.io/">Neovim</a></h1>
-      <p>Community-maintained Kanagawa colorscheme for Neovim, inspired by Katsushika Hokusai's <em>The Great Wave off Kanagawa</em>.</p>
-      <p>
-        <a href="https://github.com/kanagawa-community/neovim/stargazers">
-          <picture>
-            <source media="(prefers-color-scheme: dark)" srcset="https://img.shields.io/github/stars/kanagawa-community/neovim?style=for-the-badge&amp;labelColor=1F1F28&amp;color=E6C384">
-            <source media="(prefers-color-scheme: light)" srcset="https://img.shields.io/github/stars/kanagawa-community/neovim?style=for-the-badge&amp;labelColor=F2ECBC&amp;color=77713F">
-            <img src="https://img.shields.io/github/stars/kanagawa-community/neovim?style=for-the-badge&amp;labelColor=1F1F28&amp;color=E6C384" alt="GitHub stars">
-          </picture>
-        </a>
-        <a href="https://github.com/kanagawa-community/neovim/releases/latest">
-          <picture>
-            <source media="(prefers-color-scheme: dark)" srcset="https://img.shields.io/github/v/release/kanagawa-community/neovim?style=for-the-badge&amp;label=release&amp;labelColor=1F1F28&amp;color=7E9CD8">
-            <source media="(prefers-color-scheme: light)" srcset="https://img.shields.io/github/v/release/kanagawa-community/neovim?style=for-the-badge&amp;label=release&amp;labelColor=F2ECBC&amp;color=4D699B">
-            <img src="https://img.shields.io/github/v/release/kanagawa-community/neovim?style=for-the-badge&amp;label=release&amp;labelColor=1F1F28&amp;color=7E9CD8" alt="Latest release">
-          </picture>
-        </a>
-        <a href="https://github.com/kanagawa-community/neovim/issues">
-          <picture>
-            <source media="(prefers-color-scheme: dark)" srcset="https://img.shields.io/github/issues/kanagawa-community/neovim?style=for-the-badge&amp;labelColor=1F1F28&amp;color=C34043">
-            <source media="(prefers-color-scheme: light)" srcset="https://img.shields.io/github/issues/kanagawa-community/neovim?style=for-the-badge&amp;labelColor=F2ECBC&amp;color=C84053">
-            <img src="https://img.shields.io/github/issues/kanagawa-community/neovim?style=for-the-badge&amp;labelColor=1F1F28&amp;color=C34043" alt="GitHub issues">
-          </picture>
-        </a>
-      </p>
-    </td>
-  </tr>
-</table>
+<img align="left" src="https://raw.githubusercontent.com/kanagawa-community/.github/main/assets/branding/logo.png" alt="Kanagawa logo" width="200">
+
+<h3>Kanagawa for <a href="https://neovim.io/">Neovim</a></h3>
+<p>A community-maintained theme inspired by Hokusai's <em>The Great Wave off Kanagawa</em>.</p>
+
+<p>
+  <a href="https://github.com/kanagawa-community/neovim/stargazers">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="https://img.shields.io/github/stars/kanagawa-community/neovim?style=for-the-badge&amp;labelColor=1F1F28&amp;color=E6C384">
+      <source media="(prefers-color-scheme: light)" srcset="https://img.shields.io/github/stars/kanagawa-community/neovim?style=for-the-badge&amp;labelColor=F2ECBC&amp;color=77713F">
+      <img src="https://img.shields.io/github/stars/kanagawa-community/neovim?style=for-the-badge&amp;labelColor=1F1F28&amp;color=E6C384" alt="GitHub stars">
+    </picture>
+  </a>
+  <a href="https://github.com/kanagawa-community/neovim/releases/latest">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="https://img.shields.io/github/v/release/kanagawa-community/neovim?style=for-the-badge&amp;label=release&amp;labelColor=1F1F28&amp;color=7E9CD8">
+      <source media="(prefers-color-scheme: light)" srcset="https://img.shields.io/github/v/release/kanagawa-community/neovim?style=for-the-badge&amp;label=release&amp;labelColor=F2ECBC&amp;color=4D699B">
+      <img src="https://img.shields.io/github/v/release/kanagawa-community/neovim?style=for-the-badge&amp;label=release&amp;labelColor=1F1F28&amp;color=7E9CD8" alt="Latest release">
+    </picture>
+  </a>
+  <a href="https://github.com/kanagawa-community/neovim/issues">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="https://img.shields.io/github/issues/kanagawa-community/neovim?style=for-the-badge&amp;labelColor=1F1F28&amp;color=C34043">
+      <source media="(prefers-color-scheme: light)" srcset="https://img.shields.io/github/issues/kanagawa-community/neovim?style=for-the-badge&amp;labelColor=F2ECBC&amp;color=C84053">
+      <img src="https://img.shields.io/github/issues/kanagawa-community/neovim?style=for-the-badge&amp;labelColor=1F1F28&amp;color=C34043" alt="GitHub issues">
+    </picture>
+  </a>
+</p>
+
+<br clear="both">
 
 Based on the original [Kanagawa Neovim colorscheme](https://github.com/rebelot/kanagawa.nvim)
-by [Tommaso Laurenzi](https://github.com/rebelot). Part of the independent
-[kanagawa-community](https://github.com/kanagawa-community) ecosystem.
+by [Tommaso Laurenzi](https://github.com/rebelot).
 
 **Highlights:** [Three variants](#variants) ·
 [Configurable colors and highlights](#customization) ·
