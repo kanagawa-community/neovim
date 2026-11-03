@@ -2,6 +2,7 @@
 
 <h3>Kanagawa for <a href="https://neovim.io/">Neovim</a></h3>
 <p>A community-maintained theme inspired by Hokusai's <em>The Great Wave off Kanagawa</em>.</p>
+<p>The <a href="https://github.com/rebelot/kanagawa.nvim">Kanagawa palette and original Neovim colorscheme</a> were created by <a href="https://github.com/rebelot">Tommaso Laurenzi (rebelot)</a>.</p>
 
 <p>
   <a href="https://github.com/kanagawa-community/neovim/stargazers">
@@ -28,9 +29,7 @@
 </p>
 
 <br clear="both">
-
-Based on the original [Kanagawa Neovim colorscheme](https://github.com/rebelot/kanagawa.nvim)
-by [Tommaso Laurenzi](https://github.com/rebelot).
+<br>
 
 **Highlights:** [Three variants](#variants) ·
 [Configurable colors and highlights](#customization) ·
