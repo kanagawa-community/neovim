@@ -1,30 +1,88 @@
-<p align="center">
-  <h2 align="center">🌊 KANAGAWA.nvim 🌊</h2>
-</p>
+<table role="presentation">
+  <tr>
+    <td align="center" valign="middle" width="220">
+      <img src="https://raw.githubusercontent.com/kanagawa-community/.github/main/assets/branding/logo.png" alt="Kanagawa logo" width="200">
+    </td>
+    <td valign="middle">
+      <h1>Kanagawa for <a href="https://neovim.io/">Neovim</a></h1>
+      <p>Community-maintained Kanagawa colorscheme for Neovim, inspired by Katsushika Hokusai's <em>The Great Wave off Kanagawa</em>.</p>
+      <p>
+        <a href="https://github.com/kanagawa-community/neovim/stargazers">
+          <picture>
+            <source media="(prefers-color-scheme: dark)" srcset="https://img.shields.io/github/stars/kanagawa-community/neovim?style=for-the-badge&amp;labelColor=1F1F28&amp;color=E6C384">
+            <source media="(prefers-color-scheme: light)" srcset="https://img.shields.io/github/stars/kanagawa-community/neovim?style=for-the-badge&amp;labelColor=F2ECBC&amp;color=77713F">
+            <img src="https://img.shields.io/github/stars/kanagawa-community/neovim?style=for-the-badge&amp;labelColor=1F1F28&amp;color=E6C384" alt="GitHub stars">
+          </picture>
+        </a>
+        <a href="https://github.com/kanagawa-community/neovim/releases/latest">
+          <picture>
+            <source media="(prefers-color-scheme: dark)" srcset="https://img.shields.io/github/v/release/kanagawa-community/neovim?style=for-the-badge&amp;label=release&amp;labelColor=1F1F28&amp;color=7E9CD8">
+            <source media="(prefers-color-scheme: light)" srcset="https://img.shields.io/github/v/release/kanagawa-community/neovim?style=for-the-badge&amp;label=release&amp;labelColor=F2ECBC&amp;color=4D699B">
+            <img src="https://img.shields.io/github/v/release/kanagawa-community/neovim?style=for-the-badge&amp;label=release&amp;labelColor=1F1F28&amp;color=7E9CD8" alt="Latest release">
+          </picture>
+        </a>
+        <a href="https://github.com/kanagawa-community/neovim/issues">
+          <picture>
+            <source media="(prefers-color-scheme: dark)" srcset="https://img.shields.io/github/issues/kanagawa-community/neovim?style=for-the-badge&amp;labelColor=1F1F28&amp;color=C34043">
+            <source media="(prefers-color-scheme: light)" srcset="https://img.shields.io/github/issues/kanagawa-community/neovim?style=for-the-badge&amp;labelColor=F2ECBC&amp;color=C84053">
+            <img src="https://img.shields.io/github/issues/kanagawa-community/neovim?style=for-the-badge&amp;labelColor=1F1F28&amp;color=C34043" alt="GitHub issues">
+          </picture>
+        </a>
+      </p>
+    </td>
+  </tr>
+</table>
 
-<p align="center">
-  <img src="kanagawa@2x.png" width="500" >
-</p>
+Based on the original [Kanagawa Neovim colorscheme](https://github.com/rebelot/kanagawa.nvim)
+by [Tommaso Laurenzi](https://github.com/rebelot). Part of the independent
+[kanagawa-community](https://github.com/kanagawa-community) ecosystem.
 
-<p align="center">NeoVim dark colorscheme inspired by the colors of the famous painting by Katsushika Hokusai.</p>
+**Highlights:** [Three variants](#variants) ·
+[Configurable colors and highlights](#customization) ·
+[Plugin integrations](#integration) · [Options](#configuration)
 
-<p align="center">
-  <h2 align="center"><img alt="Preview" src="https://user-images.githubusercontent.com/36300441/222913073-22b95f11-8c08-4b2b-867c-19072c921de1.png" width=1000></h2>
-</p>
+## Preview
 
-[![W3C](https://img.shields.io/badge/WCAG_2.1_|_AA-756891?logo=w3c&logoColor=fff&style=for-the-badge)](https://www.w3.org/TR/WCAG21/#contrast-minimum)
+![Neovim window showing the Kanagawa colorscheme](assets/screenshots/showcase.png)
 
 ## Features
 
-- Extensive support for `TreeSitter` syntax highlighting, and _many_ popular plugins
-- Compilation to lua byte code for super fast startup times
+- Tree-sitter syntax highlighting and support for many popular plugins.
+- Optional Lua bytecode compilation for faster startup.
 
 ## Installation
 
-Download with your favorite package manager.
+Choose a plugin manager and add Kanagawa to your Neovim configuration.
+
+### `vim.pack` (Neovim 0.12+)
+
+Neovim's built-in plugin manager is experimental. Add this to your `init.lua`:
 
 ```lua
-use "rebelot/kanagawa.nvim"
+vim.pack.add({
+    { src = "https://github.com/kanagawa-community/neovim", name = "kanagawa" },
+})
+```
+
+### [lazy.nvim](https://github.com/folke/lazy.nvim)
+
+Add this plugin spec:
+
+```lua
+{
+    "kanagawa-community/neovim",
+    name = "kanagawa",
+    lazy = false,
+    priority = 1000,
+}
+```
+
+### [packer.nvim](https://github.com/wbthomason/packer.nvim)
+
+For existing Packer configurations:
+
+```lua
+use { "kanagawa-community/neovim", as = "kanagawa" }
 ```
 
 ## Requirements
@@ -35,7 +93,7 @@ use "rebelot/kanagawa.nvim"
 
 ## Usage
 
-As simple as writing (pasting)
+Set the colorscheme in your Neovim configuration:
 
 ```vim
 colorscheme kanagawa
@@ -47,7 +105,7 @@ vim.cmd("colorscheme kanagawa")
 
 ## Configuration
 
-There is no need to call setup if you are ok with the defaults.
+Call `setup` only if you want to change the defaults.
 
 ```lua
 -- Default options:
@@ -80,7 +138,7 @@ require('kanagawa').setup({
 vim.cmd("colorscheme kanagawa")
 ```
 
-**_NOTE 1:_** If you enable compilation, make sure to run `:KanagawaCompile` command every time you make changes to your config.
+If you enable compilation, run `:KanagawaCompile` after each configuration change.
 
 ```vim
 " 1. Modify your config
@@ -89,17 +147,17 @@ vim.cmd("colorscheme kanagawa")
 :KanagawaCompile
 ```
 
-**_NOTE 2:_** Kanagawa adjusts to the value of some options. Make sure that the options `'laststatus'` and `'cmdheight'` are set **_before_** calling `setup`.
+Kanagawa uses the values of `'laststatus'` and `'cmdheight'` during setup, so set both options before calling `setup`.
 
-## Themes
+## Variants
 
-Kanagawa comes in three variants:
+Kanagawa supports three variants:
 
-- `wave` the default heart-warming theme,
-- `dragon` for those late-night sessions
-- `lotus` for when you're out in the open.
+- 🌊 **Wave** (`wave`), the default dark variant.
+- 🐉 **Dragon** (`dragon`), a darker, muted variant.
+- 🪷 **Lotus** (`lotus`), the light variant.
 
-Themes can be changed in three ways:
+Variants can be changed in three ways:
 
 - Setting `config.theme` to the desired theme.
 - Using the `background` option:
@@ -120,17 +178,16 @@ Themes can be changed in three ways:
 
 ## Customization
 
-In kanagawa, there are _two_ kinds of colors: `PaletteColors` and `ThemeColors`;
-`PaletteColors` are defined directly as RGB Hex strings, and have arbitrary names
-that recall their actual color. Conversely, `ThemeColors` are named and grouped _semantically_
-on the basis of their actual function.
+Kanagawa separates palette values from semantic theme colors. `PaletteColors`
+are RGB hex values named for their appearance. `ThemeColors` use semantic names
+grouped by function.
 
-In short, a `palette` defines all the available colors, while a `theme` maps the `PaletteColors`
-to specific `ThemeColors` and the same palette color may be assigned to multiple theme colors.
+The `palette` defines available colors. A `theme` maps palette colors to
+semantic theme colors, and can use one palette color for multiple purposes.
 
-You can change _both_ theme or palette colors using `config.colors`.
-All the palette color names can be found [here](lua/kanagawa/colors.lua),
-while their usage by each theme can be found [here](lua/kanagawa/themes.lua).
+Use `config.colors` to change palette values and theme colors.
+See [the palette color names](lua/kanagawa/colors.lua) and
+[how each theme uses them](lua/kanagawa/themes.lua).
 
 ```lua
 require('kanagawa').setup({
@@ -166,8 +223,9 @@ require('kanagawa').setup({
 })
 ```
 
-You can also conveniently add/modify any `hlgroups` using the `config.overrides` option, allowing you to customize the looks of specific built-in elements, or any other external plugins that provides `hlgroups`. (See `:help highlight` for more information on `hlgroups`.)
-Supported keywords are the same for `:h nvim_set_hl` `{val}` parameter.
+Use `config.overrides` to change built-in or plugin highlight groups. See
+`:help highlight` for details about highlight groups. Supported keywords match
+the `{val}` parameter of `:h nvim_set_hl`.
 
 ```lua
 require('kanagawa').setup({
@@ -202,9 +260,11 @@ colors = {
 }
 ```
 
-#### Add _gutter_ indications for treesitter-context.
+#### Add gutter indications for treesitter-context
 
-Italicize and dim the background of line numbers that belong to the [treesitter-context](https://github.com/nvim-treesitter/nvim-treesitter-context/) context.
+Italicize and dim line numbers that belong to the
+[treesitter-context](https://github.com/nvim-treesitter/nvim-treesitter-context/)
+context.
 
 ```lua
 overrides = function(colors)
@@ -218,7 +278,7 @@ end,
 
 #### Transparent Floating Windows
 
-This will make floating windows look nicer with default borders.
+Set transparent backgrounds on floating windows while keeping their default borders.
 
 ```lua
 overrides = function(colors)
@@ -241,9 +301,8 @@ overrides = function(colors)
 end,
 ```
 
-If you'd like to keep the floating windows darker, but you're unhappy with how
-borders are rendered, consider using characters that are drawn at the edges of
-the box:
+To keep floating windows dark and change how borders look, use characters drawn
+at the edges of the box:
 
 ```lua
 { "🭽", "▔", "🭾", "▕", "🭿", "▁", "🭼", "▏" }
@@ -251,7 +310,7 @@ the box:
 
 #### Borderless Telescope
 
-Block-like _modern_ Telescope UI
+Create a block-style Telescope interface.
 
 ```lua
 overrides = function(colors)
@@ -270,7 +329,7 @@ end,
 
 #### Dark completion (popup) menu
 
-More uniform colors for the popup menu.
+Use a more uniform color scheme for the popup menu.
 
 ```lua
 overrides = function(colors)
@@ -286,7 +345,8 @@ end,
 
 #### Tint background of diagnostic messages with their foreground color
 
-This immitates a style of diagnostic messages seen, for example, in [tokyonight.nvim](https://github.com/folke/tokyonight.nvim).
+This gives diagnostic messages a tinted background, similar to
+[tokyonight.nvim](https://github.com/folke/tokyonight.nvim).
 
 ```lua
 overrides = function(colors)
@@ -321,8 +381,7 @@ local wave_colors = require("kanagawa.colors").setup({ theme = 'wave' })
 
 ### Terminal integration
 
-The following example provides a snippet to automatically change the theme
-for the Kitty terminal emulator.
+Change Kitty's theme when Neovim's colorscheme changes:
 
 ```lua
 vim.api.nvim_create_autocmd("ColorScheme", {
@@ -339,56 +398,65 @@ vim.api.nvim_create_autocmd("ColorScheme", {
 })
 ```
 
-<details>
-<summary><h2>Color palette</h2></summary>
+## Wave color palette
 
-|                                                         | Name          |    Hex    | Usage                                                                             |
+<details>
+<summary>Show Wave palette color table</summary>
+
+|                         Swatch                          | Name          |    Hex    | Usage                                                                             |
 | :-----------------------------------------------------: | :------------ | :-------: | :-------------------------------------------------------------------------------- |
-|   <img src="assets/circles/fujiWhite.svg" width="40">   | fujiWhite     | `#DCD7BA` | Default foreground                                                                |
-|   <img src="assets/circles/oldWhite.svg" width="40">    | oldWhite      | `#C8C093` | Dark foreground (statuslines)                                                     |
-|   <img src="assets/circles/sumiInk0.svg" width="40">    | sumiInk0      | `#16161D` | Dark background (statuslines and floating windows)                                |
-|   <img src="assets/circles/sumiInk1.svg" width="40">    | sumiInk1      | `#1F1F28` | Default background                                                                |
-|   <img src="assets/circles/sumiInk2.svg" width="40">    | sumiInk2      | `#2A2A37` | Lighter background (colorcolumn, folds)                                           |
-|   <img src="assets/circles/sumiInk3.svg" width="40">    | sumiInk3      | `#363646` | Lighter background (cursorline)                                                   |
-|   <img src="assets/circles/sumiInk4.svg" width="40">    | sumiInk4      | `#54546D` | Darker foreground (line numbers, fold column, non-text characters), float borders |
-|   <img src="assets/circles/waveBlue1.svg" width="40">   | waveBlue1     | `#223249` | Popup background, visual selection background                                     |
-|   <img src="assets/circles/waveBlue2.svg" width="40">   | waveBlue2     | `#2D4F67` | Popup selection background, search background                                     |
-|  <img src="assets/circles/winterGreen.svg" width="40">  | winterGreen   | `#2B3328` | Diff Add (background)                                                             |
-| <img src="assets/circles/winterYellow.svg" width="40">  | winterYellow  | `#49443C` | Diff Change (background)                                                          |
-|   <img src="assets/circles/winterRed.svg" width="40">   | winterRed     | `#43242B` | Diff Deleted (background)                                                         |
-|  <img src="assets/circles/winterBlue.svg" width="40">   | winterBlue    | `#252535` | Diff Line (background)                                                            |
-|  <img src="assets/circles/autumnGreen.svg" width="40">  | autumnGreen   | `#76946A` | Git Add                                                                           |
-|   <img src="assets/circles/autumnRed.svg" width="40">   | autumnRed     | `#C34043` | Git Delete                                                                        |
-| <img src="assets/circles/autumnYellow.svg" width="40">  | autumnYellow  | `#DCA561` | Git Change                                                                        |
-|  <img src="assets/circles/samuraiRed.svg" width="40">   | samuraiRed    | `#E82424` | Diagnostic Error                                                                  |
-|  <img src="assets/circles/roninYellow.svg" width="40">  | roninYellow   | `#FF9E3B` | Diagnostic Warning                                                                |
-|   <img src="assets/circles/waveAqua1.svg" width="40">   | waveAqua1     | `#6A9589` | Diagnostic Info                                                                   |
-|  <img src="assets/circles/dragonBlue.svg" width="40">   | dragonBlue    | `#658594` | Diagnostic Hint                                                                   |
-|   <img src="assets/circles/fujiGray.svg" width="40">    | fujiGray      | `#727169` | Comments                                                                          |
-| <img src="assets/circles/springViolet1.svg" width="40"> | springViolet1 | `#938AA9` | Light foreground                                                                  |
-|   <img src="assets/circles/oniViolet.svg" width="40">   | oniViolet     | `#957FB8` | Statements and Keywords                                                           |
-|  <img src="assets/circles/crystalBlue.svg" width="40">  | crystalBlue   | `#7E9CD8` | Functions and Titles                                                              |
-| <img src="assets/circles/springViolet2.svg" width="40"> | springViolet2 | `#9CABCA` | Brackets and punctuation                                                          |
-|  <img src="assets/circles/springBlue.svg" width="40">   | springBlue    | `#7FB4CA` | Specials and builtin functions                                                    |
-|   <img src="assets/circles/lightBlue.svg" width="40">   | lightBlue     | `#A3D4D5` | Not used                                                                          |
-|   <img src="assets/circles/waveAqua2.svg" width="40">   | waveAqua2     | `#7AA89F` | Types                                                                             |
-|  <img src="assets/circles/springGreen.svg" width="40">  | springGreen   | `#98BB6C` | Strings                                                                           |
-|  <img src="assets/circles/boatYellow1.svg" width="40">  | boatYellow1   | `#938056` | Not used                                                                          |
-|  <img src="assets/circles/boatYellow2.svg" width="40">  | boatYellow2   | `#C0A36E` | Operators, RegEx                                                                  |
-|  <img src="assets/circles/carpYellow.svg" width="40">   | carpYellow    | `#E6C384` | Identifiers                                                                       |
-|  <img src="assets/circles/sakuraPink.svg" width="40">   | sakuraPink    | `#D27E99` | Numbers                                                                           |
-|    <img src="assets/circles/waveRed.svg" width="40">    | waveRed       | `#E46876` | Standout specials 1 (builtin variables)                                           |
-|   <img src="assets/circles/peachRed.svg" width="40">    | peachRed      | `#FF5D62` | Standout specials 2 (exception handling, return)                                  |
-| <img src="assets/circles/surimiOrange.svg" width="40">  | surimiOrange  | `#FFA066` | Constants, imports, booleans                                                      |
-|  <img src="assets/circles/katanaGray.svg" width="40">   | katanaGray    | `#717C7C` | Deprecated                                                                        |
+|   <img src="assets/circles/fujiWhite.svg" alt="" width="40">   | fujiWhite     | `#DCD7BA` | Default foreground                                                                |
+|   <img src="assets/circles/oldWhite.svg" alt="" width="40">    | oldWhite      | `#C8C093` | Dark foreground (statuslines)                                                     |
+|   <img src="assets/circles/sumiInk0.svg" alt="" width="40">    | sumiInk0      | `#16161D` | Dark background (statuslines and floating windows)                                |
+|   <img src="assets/circles/sumiInk1.svg" alt="" width="40">    | sumiInk1      | `#1F1F28` | Default background                                                                |
+|   <img src="assets/circles/sumiInk2.svg" alt="" width="40">    | sumiInk2      | `#2A2A37` | Lighter background (colorcolumn, folds)                                           |
+|   <img src="assets/circles/sumiInk3.svg" alt="" width="40">    | sumiInk3      | `#363646` | Lighter background (cursorline)                                                   |
+|   <img src="assets/circles/sumiInk4.svg" alt="" width="40">    | sumiInk4      | `#54546D` | Darker foreground (line numbers, fold column, non-text characters), float borders |
+|   <img src="assets/circles/waveBlue1.svg" alt="" width="40">   | waveBlue1     | `#223249` | Popup background, visual selection background                                     |
+|   <img src="assets/circles/waveBlue2.svg" alt="" width="40">   | waveBlue2     | `#2D4F67` | Popup selection background, search background                                     |
+|  <img src="assets/circles/winterGreen.svg" alt="" width="40">  | winterGreen   | `#2B3328` | Diff Add (background)                                                             |
+| <img src="assets/circles/winterYellow.svg" alt="" width="40">  | winterYellow  | `#49443C` | Diff Change (background)                                                          |
+|   <img src="assets/circles/winterRed.svg" alt="" width="40">   | winterRed     | `#43242B` | Diff Deleted (background)                                                         |
+|  <img src="assets/circles/winterBlue.svg" alt="" width="40">  | winterBlue    | `#252535` | Diff Line (background)                                                            |
+|  <img src="assets/circles/autumnGreen.svg" alt="" width="40">  | autumnGreen   | `#76946A` | Git Add                                                                           |
+|   <img src="assets/circles/autumnRed.svg" alt="" width="40">   | autumnRed     | `#C34043` | Git Delete                                                                        |
+| <img src="assets/circles/autumnYellow.svg" alt="" width="40">  | autumnYellow  | `#DCA561` | Git Change                                                                        |
+|  <img src="assets/circles/samuraiRed.svg" alt="" width="40">   | samuraiRed    | `#E82424` | Diagnostic Error                                                                  |
+|  <img src="assets/circles/roninYellow.svg" alt="" width="40">  | roninYellow   | `#FF9E3B` | Diagnostic Warning                                                                |
+|   <img src="assets/circles/waveAqua1.svg" alt="" width="40">   | waveAqua1     | `#6A9589` | Diagnostic Info                                                                   |
+|  <img src="assets/circles/dragonBlue.svg" alt="" width="40">  | dragonBlue    | `#658594` | Diagnostic Hint                                                                   |
+|   <img src="assets/circles/fujiGray.svg" alt="" width="40">    | fujiGray      | `#727169` | Comments                                                                          |
+| <img src="assets/circles/springViolet1.svg" alt="" width="40"> | springViolet1 | `#938AA9` | Light foreground                                                                  |
+|   <img src="assets/circles/oniViolet.svg" alt="" width="40">   | oniViolet     | `#957FB8` | Statements and Keywords                                                           |
+|  <img src="assets/circles/crystalBlue.svg" alt="" width="40">  | crystalBlue   | `#7E9CD8` | Functions and Titles                                                              |
+| <img src="assets/circles/springViolet2.svg" alt="" width="40"> | springViolet2 | `#9CABCA` | Brackets and punctuation                                                          |
+|  <img src="assets/circles/springBlue.svg" alt="" width="40">  | springBlue    | `#7FB4CA` | Specials and builtin functions                                                    |
+|   <img src="assets/circles/lightBlue.svg" alt="" width="40">   | lightBlue     | `#A3D4D5` | Not used                                                                          |
+|   <img src="assets/circles/waveAqua2.svg" alt="" width="40">   | waveAqua2     | `#7AA89F` | Types                                                                             |
+|  <img src="assets/circles/springGreen.svg" alt="" width="40">  | springGreen   | `#98BB6C` | Strings                                                                           |
+|  <img src="assets/circles/boatYellow1.svg" alt="" width="40"> | boatYellow1   | `#938056` | Not used                                                                          |
+|  <img src="assets/circles/boatYellow2.svg" alt="" width="40"> | boatYellow2   | `#C0A36E` | Operators, RegEx                                                                  |
+|  <img src="assets/circles/carpYellow.svg" alt="" width="40">   | carpYellow    | `#E6C384` | Identifiers                                                                       |
+|  <img src="assets/circles/sakuraPink.svg" alt="" width="40">   | sakuraPink    | `#D27E99` | Numbers                                                                           |
+|    <img src="assets/circles/waveRed.svg" alt="" width="40">    | waveRed       | `#E46876` | Standout specials 1 (builtin variables)                                           |
+|   <img src="assets/circles/peachRed.svg" alt="" width="40">   | peachRed      | `#FF5D62` | Standout specials 2 (exception handling, return)                                  |
+| <img src="assets/circles/surimiOrange.svg" alt="" width="40"> | surimiOrange  | `#FFA066` | Constants, imports, booleans                                                      |
+|  <img src="assets/circles/katanaGray.svg" alt="" width="40">  | katanaGray    | `#717C7C` | Deprecated                                                                        |
 
 </details>
 
 ## Accessibility
 
-The colors maintain a `4.5:1` contrast ratio, complying with [WCAG 2.1 | Level AA](https://www.w3.org/TR/WCAG21/#contrast-minimum).
+Contrast depends on the foreground and background colors used together. A theme
+cannot guarantee WCAG compliance in every interface, so test each pair used for
+text or controls. [WCAG 2.1 Level AA contrast requirements](https://www.w3.org/TR/WCAG21/#contrast-minimum)
+specify at least `4.5:1` for normal text and `3:1` for large text.
+[WCAG guidance on use of color](https://www.w3.org/TR/WCAG21/#use-of-color)
+also says not to use color alone to communicate meaning.
 
 ## Extras
+
+We are migrating these extras, so their links and availability may change.
 
 - [Alacritty](extras/alacritty/)
 - [Alfred](extras/alfred.md)
@@ -409,7 +477,7 @@ The colors maintain a `4.5:1` contrast ratio, complying with [WCAG 2.1 | Level A
 - [Xresources](extras/xresources/)
 - [tmTheme (Sublime Text, bat and delta)](extras/tmTheme/)
 - [JSON compatible with many terminals](extras/gogh/) Check [Gogh](https://github.com/Gogh-Co/Gogh#-terminals) for the list of supported terminals.
-- 🎉 Bonus! You win a tiny [python script](palette.py)🐍 to extract color palettes 🎨 from any image! 🥳
+- Bonus: use the [Python script to extract a color palette](palette.py) from an image.
 
 Run the following command to generate new extra themes from the kanagawa plugin directory:
 
@@ -424,8 +492,8 @@ Run the following command to generate new extra themes from the kanagawa plugin 
 - [Catppuccin](https://github.com/catppuccin/nvim)
 - [Affinity Designer](https://affinity.serif.com/designer/)
 
-### Donate
+### Support upstream
 
-Buy me coffee and support my work ;)
+Support the original Kanagawa author, Tommaso Laurenzi:
 
-[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/donate/?business=VNQPHGW4JEM3S&no_recurring=0&item_name=Buy+me+coffee+and+support+my+work+%3B%29&currency_code=EUR)
+[![Donate using PayPal](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/donate/?business=VNQPHGW4JEM3S&no_recurring=0&item_name=Buy+me+coffee+and+support+my+work+%3B%29&currency_code=EUR)
