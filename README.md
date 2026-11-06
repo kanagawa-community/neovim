@@ -2,7 +2,7 @@
 
 <h3>Kanagawa for <a href="https://neovim.io/">Neovim</a></h3>
 <p>A community-maintained theme inspired by Hokusai's <em>The Great Wave off Kanagawa</em>.</p>
-<p>Original <a href="https://github.com/rebelot/kanagawa.nvim">theme and palette</a> by <a href="https://github.com/rebelot">rebelot</a>.</p>
+<p>Derived from <a href="https://github.com/rebelot/kanagawa.nvim">kanagawa.nvim</a>, the original theme and palette by <a href="https://github.com/rebelot">rebelot</a>.</p>
 
 <p>
   <a href="https://github.com/kanagawa-community/neovim/stargazers">
@@ -147,9 +147,9 @@ Kanagawa uses the values of `'laststatus'` and `'cmdheight'` during setup, so se
 
 Kanagawa supports three variants:
 
-- 🌊 **Wave** (`wave`), the default dark variant.
-- 🐉 **Dragon** (`dragon`), a darker, muted variant.
-- 🪷 **Lotus** (`lotus`), the light variant.
+- 🌊 Wave (`wave`), the default dark variant.
+- 🐉 Dragon (`dragon`), a darker, muted variant.
+- 🪷 Lotus (`lotus`), the light variant.
 
 Variants can be changed in three ways:
 
