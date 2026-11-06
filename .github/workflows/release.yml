@@ -32,6 +32,13 @@ jobs:
             exit 0
           fi
 
+          # A re-run after a release finds HEAD already on the new tag, where cog
+          # reports an error instead of "nothing to do".
+          if git describe --tags --exact-match HEAD >/dev/null 2>&1; then
+            echo "HEAD is already tagged, so there is nothing to release."
+            exit 0
+          fi
+
           # A cog error must fail the job instead of looking like "nothing to do".
           if ! out="$(cog bump --auto --dry-run 2>&1)"; then
             echo "$out"
