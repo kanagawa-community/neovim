@@ -398,9 +398,9 @@ The [palette](https://github.com/kanagawa-community/.github/blob/main/PALETTE.md
 lists every color of Wave, Dragon, and Lotus, with swatches, hex, RGB, and HSL
 values, and the roles each color plays. The
 [style guide](https://github.com/kanagawa-community/.github/blob/main/STYLE-GUIDE.md)
-shows which color each role uses in each variant. It is shared by all Kanagawa
-ports, and the values match `lua/kanagawa/colors.lua` and
-`lua/kanagawa/themes.lua` in this plugin.
+shows which color each role uses in each variant. Every Kanagawa port shares
+them, and the colors in this plugin follow them: `lua/kanagawa/colors.lua` and
+`lua/kanagawa/themes.lua` are kept in step with the palette.
 
 ## Accessibility
 
