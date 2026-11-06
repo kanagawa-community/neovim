@@ -147,9 +147,9 @@ Kanagawa uses the values of `'laststatus'` and `'cmdheight'` during setup, so se
 
 Kanagawa supports three variants:
 
-- 🌊 **Wave** (`wave`), the default dark variant.
-- 🐉 **Dragon** (`dragon`), a darker, muted variant.
-- 🪷 **Lotus** (`lotus`), the light variant.
+- 🌊 Wave (`wave`), the default dark variant.
+- 🐉 Dragon (`dragon`), a darker, muted variant.
+- 🪷 Lotus (`lotus`), the light variant.
 
 Variants can be changed in three ways:
 
