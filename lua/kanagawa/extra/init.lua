@@ -57,17 +57,18 @@ local function generate_tmtheme(style, theme)
 		Title = { "entity.name.section", "punctuation.definition.heading" },
 	}
 
+	local ui = theme.theme.ui
 	local items = {
 		{
 			settings = {
-				background = theme.palette.sumiInk1,
-				foreground = theme.palette.fujiWhite,
-				caret = theme.palette.oldWhite,
-				invisibles = theme.palette.sumiInk4,
-				lineHighlight = theme.palette.waveBlue2,
-				selection = theme.palette.waveBlue2,
-				selectionBorder = theme.palette.sumiInk2,
-				gutterForeground = theme.palette.sumiInk4,
+				background = ui.bg_dim,
+				foreground = ui.fg,
+				caret = ui.fg_dim,
+				invisibles = ui.bg_gutter,
+				lineHighlight = ui.bg_search,
+				selection = ui.bg_search,
+				selectionBorder = ui.bg_m1,
+				gutterForeground = ui.bg_gutter,
 			},
 		},
 	}
