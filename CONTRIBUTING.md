@@ -13,7 +13,7 @@ changes are reviewed. This page covers only what is specific to this plugin.
 - Problems in Neovim itself belong with the
   [Neovim project](https://github.com/neovim/neovim/issues).
 - Changes to the colors themselves belong in the shared
-  [palette](https://github.com/kanagawa-community/.github/blob/main/PALETTE.md),
+  [palette](https://github.com/kanagawa-community/.github/blob/main/docs/PALETTE.md),
   which is the source of truth for every port. Open an issue in the
   [.github repository](https://github.com/kanagawa-community/.github/issues) so
   every port stays in step, then update `colors.lua` and `themes.lua` here to
@@ -22,7 +22,7 @@ changes are reviewed. This page covers only what is specific to this plugin.
 ## Colors
 
 Take colors from the shared palette and follow the
-[style guide](https://github.com/kanagawa-community/.github/blob/main/STYLE-GUIDE.md).
+[style guide](https://github.com/kanagawa-community/.github/blob/main/docs/STYLE-GUIDE.md).
 Do not sample colors from screenshots or add new ones. Every change must work in
 Wave, Dragon, and Lotus.
 
