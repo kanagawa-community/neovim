@@ -431,7 +431,7 @@ We are migrating these extras, so their links and availability may change.
 - [Windows Terminal](extras/windows-terminal/)
 - [Ghostty](extras/ghostty)
 - [Xresources](extras/xresources/)
-- [tmTheme (Sublime Text, bat and delta)](extras/tmTheme/)
+- [tmTheme (Sublime Text)](extras/tmTheme/), also the source of the [bat port](https://github.com/kanagawa-community/bat) themes
 - [JSON compatible with many terminals](extras/gogh/) Check [Gogh](https://github.com/Gogh-Co/Gogh#-terminals) for the list of supported terminals.
 - Bonus: use the [Python script to extract a color palette](palette.py) from an image.
 
