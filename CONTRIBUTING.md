@@ -40,13 +40,6 @@ Wave, Dragon, and Lotus.
   vim.cmd.colorscheme("kanagawa-wave") -- or kanagawa-dragon, kanagawa-lotus
   ```
 
-- `extras/` is generated from the theme. After changing colors, regenerate it
-  from the plugin directory:
-
-  ```sh
-  nvim --headless "+lua require('kanagawa.extra').setup()" +qa
-  ```
-
 ## Pull requests
 
 - Keep each pull request to one change, and include a screenshot of each variant
