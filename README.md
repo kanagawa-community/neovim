@@ -431,15 +431,9 @@ We are migrating these extras, so their links and availability may change.
 - [Windows Terminal](extras/windows-terminal/)
 - [Ghostty](extras/ghostty)
 - [Xresources](extras/xresources/)
-- [tmTheme (Sublime Text)](extras/tmTheme/), also the source of the [bat port](https://github.com/kanagawa-community/bat) themes
+- tmTheme (Sublime Text): use the themes of the [bat port](https://github.com/kanagawa-community/bat)
 - [JSON compatible with many terminals](extras/gogh/) Check [Gogh](https://github.com/Gogh-Co/Gogh#-terminals) for the list of supported terminals.
 - Bonus: use the [Python script to extract a color palette](palette.py) from an image.
-
-Run the following command to generate new extra themes from the kanagawa plugin directory:
-
-```sh
-    nvim --headless "+lua require('kanagawa.extra').setup()" +qa
-```
 
 ## Issues and contributions
 
