@@ -413,32 +413,9 @@ also says not to use color alone to communicate meaning.
 
 ## Extras
 
-Themes for other applications are separate ports in the
-[kanagawa-community](https://github.com/kanagawa-community) organization:
-
-- [aerc](https://github.com/kanagawa-community/aerc)
-- [Alacritty](https://github.com/kanagawa-community/alacritty)
-- [Awesome](https://github.com/kanagawa-community/awesome)
-- [Base16](https://github.com/kanagawa-community/base16)
-- [Broot](https://github.com/kanagawa-community/broot)
-- [Foot](https://github.com/kanagawa-community/foot)
-- [Ghostty](https://github.com/kanagawa-community/ghostty)
-- [Gogh (JSON for many terminals)](https://github.com/kanagawa-community/gogh)
-- [Helix](https://github.com/kanagawa-community/helix)
-- [Hyprland](https://github.com/kanagawa-community/hyprland)
-- [iTerm2](https://github.com/kanagawa-community/iterm2)
-- [Kitty](https://github.com/kanagawa-community/kitty)
-- [micro](https://github.com/kanagawa-community/micro)
-- [Mintty](https://github.com/kanagawa-community/mintty)
-- [Ptyxis](https://github.com/kanagawa-community/ptyxis)
-- [pywal](https://github.com/kanagawa-community/pywal)
-- [Sway](https://github.com/kanagawa-community/sway)
-- [WezTerm](https://github.com/kanagawa-community/wezterm)
-- [Windows Terminal](https://github.com/kanagawa-community/windows-terminal)
-- [Wofi](https://github.com/kanagawa-community/wofi)
-- [Xresources](https://github.com/kanagawa-community/xresources)
-- [Zathura](https://github.com/kanagawa-community/zathura)
-- tmTheme (Sublime Text): use the themes of the [bat port](https://github.com/kanagawa-community/bat)
+Themes for other applications are separate ports. See the
+[list of ports](https://github.com/kanagawa-community#ports) in the
+kanagawa-community organization.
 
 These extras are not ported yet:
 
