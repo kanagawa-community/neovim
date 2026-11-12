@@ -413,27 +413,39 @@ also says not to use color alone to communicate meaning.
 
 ## Extras
 
-We are migrating these extras, so their links and availability may change.
+Themes for other applications are separate ports in the
+[kanagawa-community](https://github.com/kanagawa-community) organization:
 
-- [Alacritty](extras/alacritty/)
-- [Alfred](extras/alfred.md)
-- [Base16](extras/base16/)
-- [Broot](extras/broot/)
-- [Emacs](extras/emacs/)
-- [Foot](extras/foot/)
-- [iTerm](extras/iterm/)
-- [Kitty](extras/kitty/)
-- [Mintty](extras/mintty/)
-- [Ptyxis](extras/ptyxis/)
-- [Pywal](extras/pywal/)
-- [Sway](extras/sway/)
-- [Wezterm](extras/wezterm/)
-- [Windows Terminal](extras/windows-terminal/)
-- [Ghostty](extras/ghostty)
-- [Xresources](extras/xresources/)
+- [aerc](https://github.com/kanagawa-community/aerc)
+- [Alacritty](https://github.com/kanagawa-community/alacritty)
+- [Awesome](https://github.com/kanagawa-community/awesome)
+- [Base16](https://github.com/kanagawa-community/base16)
+- [Broot](https://github.com/kanagawa-community/broot)
+- [Foot](https://github.com/kanagawa-community/foot)
+- [Ghostty](https://github.com/kanagawa-community/ghostty)
+- [Gogh (JSON for many terminals)](https://github.com/kanagawa-community/gogh)
+- [Helix](https://github.com/kanagawa-community/helix)
+- [Hyprland](https://github.com/kanagawa-community/hyprland)
+- [iTerm2](https://github.com/kanagawa-community/iterm2)
+- [Kitty](https://github.com/kanagawa-community/kitty)
+- [micro](https://github.com/kanagawa-community/micro)
+- [Mintty](https://github.com/kanagawa-community/mintty)
+- [Ptyxis](https://github.com/kanagawa-community/ptyxis)
+- [pywal](https://github.com/kanagawa-community/pywal)
+- [Sway](https://github.com/kanagawa-community/sway)
+- [WezTerm](https://github.com/kanagawa-community/wezterm)
+- [Windows Terminal](https://github.com/kanagawa-community/windows-terminal)
+- [Wofi](https://github.com/kanagawa-community/wofi)
+- [Xresources](https://github.com/kanagawa-community/xresources)
+- [Zathura](https://github.com/kanagawa-community/zathura)
 - tmTheme (Sublime Text): use the themes of the [bat port](https://github.com/kanagawa-community/bat)
-- [JSON compatible with many terminals](extras/gogh/) Check [Gogh](https://github.com/Gogh-Co/Gogh#-terminals) for the list of supported terminals.
-- Bonus: use the [Python script to extract a color palette](palette.py) from an image.
+
+These extras are not ported yet:
+
+- [Alfred](extras/alfred.md)
+- [Emacs](extras/emacs/)
+
+Bonus: use the [Python script to extract a color palette](palette.py) from an image.
 
 ## Issues and contributions
 
